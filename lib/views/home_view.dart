@@ -47,7 +47,14 @@ class HomeView extends StatelessWidget {
             return WeatherInfoBody();
           }
           if (State is WeatherFailureState) {
-            return Text(State.errMessage);
+            return Center(
+              child: Text(
+                State.errMessage,
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            );
           }
           return NoWeatherBody();
         },
